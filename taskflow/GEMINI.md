@@ -7,9 +7,7 @@ This project is a fullstack web application built using Next.js. It includes bot
 - Framework: Next.js (App Router)
 - Language: TypeScript
 - Styling: Tailwind CSS (or your preferred CSS solution)
-- Database: PostgreSQL (via Prisma ORM)
-- Authentication: NextAuth (or custom JWT-based auth)
-- Deployment: Vercel (recommended)
+- Database: ignore for now
 
 ---
 
@@ -19,7 +17,6 @@ This project is a fullstack web application built using Next.js. It includes bot
 /lib # Utility functions, helpers, configs
 /server # Backend logic (optional separation)
 /app/api # API routes (route handlers)
-/prisma # Database schema and migrations
 /public # Static assets
 /styles # Global styles
 
@@ -51,19 +48,7 @@ Use modern Next.js patterns:
 
 ---
 
-### 4. Database Access
-Use Prisma for type-safe queries.
-
-Example:
-```ts
-import { prisma } from "@/lib/prisma";
-
-export async function getUsers() {
-  return prisma.user.findMany();
-}
-
----
-### 5. Styling
+### 4. Styling
 
 Use Tailwind CSS for rapid UI development.
 
@@ -75,19 +60,17 @@ Keep styles consistent
 
 ---
 
-### 6. Environment Variables
+### 5. Environment Variables
 
 Store secrets in .env:
 
-DATABASE_URL=
-NEXTAUTH_SECRET=
 API_KEYS=
 
 Never expose secrets to the client.
 
 ---
 
-### 7. API Routes
+### 6. API Routes
 
 Follow this structure:
 
@@ -108,12 +91,12 @@ export async function POST(request: Request) {
 
 ---
 
-### 8. deployment 
+### 7. deployment 
 
 always ask for a double check and approval before pushing to github, vercel, or any other deployment platform.
 
 ---
-### 9. Best Practices
+### 8. Best Practices
 - Keep components small and reusable
 - Use TypeScript everywhere
 - Validate inputs on both client and server
@@ -121,7 +104,7 @@ always ask for a double check and approval before pushing to github, vercel, or 
 - Use loading and error states in UI
 
 ---
-### 10. Folder Structure
+### 9. Folder Structure
 - Always organize code in a logical and modular way
 - Use descriptive folder and file names
 - Group related files together
@@ -130,7 +113,7 @@ always ask for a double check and approval before pushing to github, vercel, or 
 
 ---
 
-### 11. build
+### 10. build
 
 Development Workflow:
 - Run Locally:
